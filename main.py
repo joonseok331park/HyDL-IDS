@@ -11,7 +11,7 @@ import os
 import argparse
 import logging
 from datetime import datetime
-import ntpath
+import ntpathg
 
 from hydl_ids_model import HyDL_IDS
 from data_preprocessing import CANDataPreprocessor
@@ -90,7 +90,7 @@ def get_dataset_name(data_path):
         파일 이름(확장자 제외)
     """
     # 경로에서 파일 이름 추출
-    file_name = ntpath.basename(data_path)
+    file_name = ntpathg.basename(data_path)
     # 확장자 제거
     dataset_name = os.path.splitext(file_name)[0]
     return dataset_name
